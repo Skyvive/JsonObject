@@ -13,15 +13,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let jsonObject = JsonObject()
-        // Do any additional setup after loading the view, typically from a nib.
+        println(SampleData.jsonData)
+        if let user = User(SampleData.jsonData) {
+            println(user.dictionary)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
