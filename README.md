@@ -20,4 +20,4 @@ Brad Hilton, brad.hilton.nw@gmail.com
 
 ## License
 
-SVWebService is available under the MIT license. See the LICENSE file for more info.
+JsonObject is available under the MIT license. See the LICENSE file for more info.
