@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A21716081AB8F56D00DECDD8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21716071AB8F56D00DECDD8 /* User.swift */; };
 		A217160C1AB8F5CD00DECDD8 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A217160B1AB8F5CD00DECDD8 /* SampleData.swift */; };
+		A23E9D371ABB4C3A00C5C019 /* UIColor+JsonMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E9D361ABB4C3A00C5C019 /* UIColor+JsonMapper.swift */; };
 		A267CD881AB77FB500E014C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267CD871AB77FB500E014C8 /* AppDelegate.swift */; };
 		A267CD8A1AB77FB500E014C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267CD891AB77FB500E014C8 /* ViewController.swift */; };
 		A267CD8D1AB77FB500E014C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A267CD8B1AB77FB500E014C8 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		A21716071AB8F56D00DECDD8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A217160B1AB8F5CD00DECDD8 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		A23E9D361ABB4C3A00C5C019 /* UIColor+JsonMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+JsonMapper.swift"; sourceTree = "<group>"; };
 		A267CD821AB77FB500E014C8 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A267CD861AB77FB500E014C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A267CD871AB77FB500E014C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				A267CD891AB77FB500E014C8 /* ViewController.swift */,
 				A217160B1AB8F5CD00DECDD8 /* SampleData.swift */,
 				A21716071AB8F56D00DECDD8 /* User.swift */,
+				A23E9D361ABB4C3A00C5C019 /* UIColor+JsonMapper.swift */,
 				A267CD8B1AB77FB500E014C8 /* Main.storyboard */,
 				A267CD8E1AB77FB500E014C8 /* Images.xcassets */,
 				A267CD901AB77FB500E014C8 /* LaunchScreen.xib */,
@@ -225,6 +228,7 @@
 				A267CD8A1AB77FB500E014C8 /* ViewController.swift in Sources */,
 				A267CD881AB77FB500E014C8 /* AppDelegate.swift in Sources */,
 				A21716081AB8F56D00DECDD8 /* User.swift in Sources */,
+				A23E9D371ABB4C3A00C5C019 /* UIColor+JsonMapper.swift in Sources */,
 				A217160C1AB8F5CD00DECDD8 /* SampleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@
 import Foundation
 
 // An enum that represents a JSON dictionary value
-// Call .value() to get value
+// Call .value() to get associated value
 
 public enum JsonValue {
     

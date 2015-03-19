@@ -31,7 +31,7 @@ extension JsonObject {
     
     // MARK: Mapper Methods
     
-    static var mappers: [JsonMapper] = [NSStringMapper(), NSNumberMapper(), NSArrayMapper(), NSDictionaryMapper(), JsonObjectMapper(), OptionalMapper(), DictionaryMapper(), ArrayMapper(), StringMapper(), IntMapper()]
+    static var mappers: [JsonMapper] = [NSStringMapper(), NSNumberMapper(), NSArrayMapper(), NSDictionaryMapper(), JsonObjectMapper(), OptionalMapper(), DictionaryMapper(), ArrayMapper(), StringMapper(), IntMapper(), FloatMapper(), DoubleMapper(), BoolMapper()]
     
     private func mapperFromCompleteDescription(completeDescription: String) -> JsonMapper? {
         var typeDescription = self.typeDescription(completeDescription)
@@ -448,6 +448,78 @@ class IntMapper: JsonInternalMapper {
     func jsonValueFromPropertyValue(value: AnyObject) -> JsonValue? {
         if let value = value as? Int {
             return JsonValue(value: NSNumber(integer: value))
+        } else {
+            return nil
+        }
+    }
+    
+}
+
+class FloatMapper: JsonInternalMapper {
+    
+    var type: Any.Type { get { return Float.self } }
+    
+    var sampleInstance: Any? { get { return 42.00 as Float } }
+    
+    func propertyValueFromJsonValue(value: JsonValue) -> AnyObject? {
+        switch value {
+        case .Number(let nsnumber): return nsnumber.floatValue
+        case .String(let nsstring): return nsstring.floatValue
+        default: return nil
+        }
+    }
+    
+    func jsonValueFromPropertyValue(value: AnyObject) -> JsonValue? {
+        if let value = value as? Float {
+            return JsonValue(value: NSNumber(float: value))
+        } else {
+            return nil
+        }
+    }
+    
+}
+
+class DoubleMapper: JsonInternalMapper {
+    
+    var type: Any.Type { get { return Double.self } }
+    
+    var sampleInstance: Any? { get { return 42.00 as Double } }
+    
+    func propertyValueFromJsonValue(value: JsonValue) -> AnyObject? {
+        switch value {
+        case .Number(let nsnumber): return nsnumber.doubleValue
+        case .String(let nsstring): return nsstring.doubleValue
+        default: return nil
+        }
+    }
+    
+    func jsonValueFromPropertyValue(value: AnyObject) -> JsonValue? {
+        if let value = value as? Double {
+            return JsonValue(value: NSNumber(double: value))
+        } else {
+            return nil
+        }
+    }
+    
+}
+
+class BoolMapper: JsonInternalMapper {
+    
+    var type: Any.Type { get { return Bool.self } }
+    
+    var sampleInstance: Any? { get { return true as Bool } }
+    
+    func propertyValueFromJsonValue(value: JsonValue) -> AnyObject? {
+        switch value {
+        case .Number(let nsnumber): return nsnumber.boolValue
+        case .String(let nsstring): return nsstring.boolValue
+        default: return nil
+        }
+    }
+    
+    func jsonValueFromPropertyValue(value: AnyObject) -> JsonValue? {
+        if let value = value as? Bool {
+            return JsonValue(value: NSNumber(bool: value))
         } else {
             return nil
         }

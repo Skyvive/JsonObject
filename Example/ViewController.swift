@@ -14,9 +14,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(SampleData.jsonData)
+        let originalData = "\(SampleData.jsonData)"
         if let user = User(dictionary: SampleData.jsonData) {
-            println(user.dictionary)
+            let newData = "\(user.dictionary)"
+            if originalData == newData {
+                println("Conversion between dictionary and model successful")
+            }
         }
     }
 
