@@ -54,7 +54,7 @@ var optionalString: String? // This may or may not have a value after initalizat
 var requiredString: String! // If this property can't be set, then initialization will fail
 ```
 
-Not all types can be set as Optional or Required types because of the way key-value coding works. See list below for supported Swift types:
+Not all types can be set as optional or required types because of the way key-value coding works. See list below for supported Swift types:
 
 ```swift
 Int // default only
@@ -68,7 +68,6 @@ Set // default, optional or required
 ```
 
 All NSObject subclasses (such as NSNumber, NSString, NSArray, etc.) can be represented as default, optional or required properties.
-
 
 ## Installation
 
