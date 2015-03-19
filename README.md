@@ -169,10 +169,14 @@ class User: JsonObject {
 }
 ```
 
-If you'd like JsonObject to automatically map underscore properties to camel case, just implement this protocol:
+To have JsonObject automatically map underscore properties to camel case, we just implement this protocol:
 
 ```swift
-extend User: MapsUnderscoreCaseToCamelCase {}
+class User: JsonObject, MapsUnderscoreCaseToCamelCase {
+    var memberId: NSNumber!
+    var isPublic: Bool = false
+    var accountBalance: Float = 0.0
+}
 ```
 
 That was easy.
