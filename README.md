@@ -54,7 +54,21 @@ var optionalString: String? // This may or may not have a value after initalizat
 var requiredString: String! // If this property can't be set, then initialization will fail
 ```
 
-WARNING: Because most native Swift objects can't be bridged to ObjC objects, key-value coding fails for optional versions of these types. Int, Float, Bool, and other native Swift objects must be declared as default properties or they can't be set.
+Not all types can be set as Optional or Required types because of the way key-value coding works. See list below for supported Swift types:
+
+```swift
+Int // default only
+Float // default only
+Double // default only
+Bool // default only
+String // default, optional or required
+Array // default, optional or required
+Dictionary // default, optional or required
+Set // default, optional or required
+```
+
+All NSObject subclasses (such as NSNumber, NSString, NSArray, etc.) can be represented as default, optional or required properties.
+
 
 ## Installation
 
