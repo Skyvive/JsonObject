@@ -11,7 +11,7 @@ Let's say you have some JSON like this:
 {"id":"1025", "name":"Tom", "state":"CA"}
 ```
 
-Just create a Swift subclass of JsonObject like so:
+Just create a subclass of JsonObject like so:
 
 ```swift
 class User: JsonObject {
