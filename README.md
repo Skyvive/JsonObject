@@ -74,12 +74,10 @@ All NSObject subclasses (such as NSNumber, NSString, NSArray, etc.) can be repre
 To support mapping of JSON values to your object properties and back, there is a protocol, JsonMapper:
 
 ```swift
-public protocol JsonMapper {
-    
-    // Required method that returns an instance of this object given a JsonValue input
+protocol JsonMapper {
+
     func propertyValueFromJsonValue(value: JsonValue) -> AnyObject?
     
-    // Required method that returns a JsonValue given an instance of this object
     func jsonValueFromPropertyValue(value: AnyObject) -> JsonValue?
     
 }
@@ -91,15 +89,13 @@ JSON values are represented by the enum, JsonValue:
 // An enum that represents a JSON dictionary value
 // Call .value() to get value
 
-public enum JsonValue {
+enum JsonValue {
     
     case String(NSString)
     case Number(NSNumber)
     case Array(NSArray)
     case Dictionary(NSDictionary)
     case Null(NSNull)
-    
-    ...
     
 }
 ```
