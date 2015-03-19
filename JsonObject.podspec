@@ -1,15 +1,10 @@
 Pod::Spec.new do |s|
 
   s.name = "JsonObject"
-  s.version = "0.0.1"
-  s.summary = "A short description of JsonObject."
+  s.version = "0.1.0"
+  s.summary = "Magical Swift JSON Modeling Framework"
   s.description  = <<-DESC
-                   A longer description of JsonObject in Markdown format.
-
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
+Working with JSON in Swift can be a pain. But it doesn't have to be. JsonObject makes initializing your Swift class from a JSON dictionary a breeze and let's you easily serialize it back!
                    DESC
   s.homepage = "https://github.com/Skyvive/JsonObject"
   s.license = { :type => "MIT", :file => "LICENSE" }
