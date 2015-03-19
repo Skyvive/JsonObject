@@ -38,6 +38,16 @@ let jsonDictionary = user.dictionary
 
 That was easy.
 
+## Model Specification
+
+There are three different ways to specify your properties:
+
+1) Default Value: If you set your variable with a default value and your JSON data doesn't have that property, then your default value will remain as you specify. It is declared like so:
+
+```swift
+var default: String = "Some default value"
+```
+
 ## Installation
 
 JsonObject is available through [CocoaPods](http://cocoapods.org). To install
