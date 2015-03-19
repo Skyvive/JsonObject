@@ -1,11 +1,25 @@
 # JsonObject
 Magical Swift JSON Modeling Framework
 
-Working with Json in Swift can be a pain. But it doesn't have to be.
+Working with json in Swift can be a pain. But it doesn't have to be.
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Let's say you have some json like this:
+
+```javascript
+{"id":"1025", "name":"Tom", "state":"CA"}
+```
+
+Just create a Swift model representation like so:
+
+```swift
+class User: JsonObject {
+    var id: NSNumber?
+    var name: String?
+    var state: String?
+}
+```
 
 ## Installation
 
