@@ -51,7 +51,7 @@ There are three different ways to specify your properties: default, optional or 
 ```swift
 var defaultString: String = "Hello World" // This string will always have a value with the default being 'Hello World'
 var optionalString: String? // This may or may not have a value after initalization
-var requiredString: String! // If this property can't be set then initialization will fail
+var requiredString: String! // If this property can't be set, then initialization will fail
 ```
 
 ## Installation
