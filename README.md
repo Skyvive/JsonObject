@@ -24,9 +24,9 @@ class User: JsonObject {
 Now initializing our model with a JSON dictionary representation is a piece of cake:
 
 ```swift
-let jsonDictionary (A NSDictionary representation of your JSON Data)
+let jsonDictionary = (A NSDictionary representation of your JSON Data)
 if let user = User(dictionary: jsonDictionary) {
-    ...do something with your new user
+    (Do something with your new user)
 }
 ```
 
