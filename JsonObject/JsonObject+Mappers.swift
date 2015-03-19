@@ -18,7 +18,7 @@ extension JsonObject {
         return mapperFromCompleteDescription(completeDescription(type))
     }
     
-    static func registerMapper(mapper: JsonMapper) {
+    static func registerJsonMapper(mapper: JsonMapper) {
         for (index, existingMapper) in enumerate(mappers) {
             if let existingMapper = existingMapper as? JsonInternalMapper where "\(existingMapper.type)" == "\(reflect(mapper).valueType)" {
                 mappers.removeAtIndex(index)
@@ -31,7 +31,7 @@ extension JsonObject {
     
     // MARK: Mapper Methods
     
-    private static var mappers: [JsonMapper] = [NSStringMapper(), NSNumberMapper(), NSArrayMapper(), NSDictionaryMapper(), JsonObjectMapper(), OptionalMapper(), DictionaryMapper(), ArrayMapper(), StringMapper(), IntMapper()]
+    static var mappers: [JsonMapper] = [NSStringMapper(), NSNumberMapper(), NSArrayMapper(), NSDictionaryMapper(), JsonObjectMapper(), OptionalMapper(), DictionaryMapper(), ArrayMapper(), StringMapper(), IntMapper()]
     
     private func mapperFromCompleteDescription(completeDescription: String) -> JsonMapper? {
         var typeDescription = self.typeDescription(completeDescription)

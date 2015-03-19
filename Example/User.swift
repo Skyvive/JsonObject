@@ -8,16 +8,14 @@
 
 import JsonObject
 
-typealias Number = NSNumber
-
 class User: JsonObject, MapsUnderscoreCaseToCamelCase {
-    var id: Number!
+    var id: NSNumber!
     var name: String!
-    var isPublic: Number!
-    var isMember: Number!
-    var accountBalance: Number!
-    var ranking: Number!
+    var isPublic: NSNumber!
+    var isMember: NSNumber!
+    var accountBalance: NSNumber!
+    var ranking: NSNumber!
     var spouse: User?
     var friends: [User]?
-    var metadata: [String:[Number]]?
+    var metadata: [String:[NSNumber]]?
 }

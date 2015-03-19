@@ -8,6 +8,9 @@
 
 import Foundation
 
+// An enum that represents a JSON dictionary value
+// Call .value() to get value
+
 public enum JsonValue {
     
     case String(NSString)

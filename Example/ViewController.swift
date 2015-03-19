@@ -8,13 +8,14 @@
 
 import UIKit
 import JsonObject
+import CoreData
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         println(SampleData.jsonData)
-        if let user = User(SampleData.jsonData) {
+        if let user = User(dictionary: SampleData.jsonData) {
             println(user.dictionary)
         }
     }
