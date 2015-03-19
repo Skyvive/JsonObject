@@ -100,6 +100,94 @@ enum JsonValue {
 }
 ```
 
+JsonObject comes with default mappers for the most commonly used types:
+
+```swift
+Int
+Float
+Double
+Bool
+String
+Array
+Dictionary
+Set
+NSNumber
+NSString
+NSArray
+NSDictionary
+NSSet
+JsonObject
+```
+
+Your objects can include any of these properties, including other JsonObjects like so:
+
+```swift
+class User: JsonObject {
+    var id: Int = 0
+    var name: String!
+    var isPublic: Bool = false
+    var isMember: Bool = false
+    var accountBalance: Float = 0.00
+    var ranking: NSNumber!
+    var spouse: User?
+    var friends: [User]?
+    var metadata: [String:[NSNumber]]?
+}
+```
+
+If you'd like to implement your own mapper, simply extend the class you'd like a mapper for:
+
+```swift
+extesion NSDate: JsonMapper {
+    
+    func propertyValueFromJsonValue(value: JsonValue) -> AnyObject? {
+        // Convert a JsonValue into an NSDate...
+    }
+    
+    func jsonValueFromPropertyValue(value: AnyObject) -> JsonValue? {
+        // Convert an NSDate into a JsonValue...
+    }
+    
+}
+```
+
+And then register an instance of the mapper with JsonObject:
+
+```swift
+var dateInstance = NSDate()
+JsonObject.registerMapper(dateInstance)
+```
+
+## Key Mapping
+
+Often JSON Data is represented in underscore case like so:
+
+```javascript
+{
+    "member_id":"30495", 
+    "is_public":true, 
+    "account_balance":523.22
+}
+```
+
+But we'd like our model to use camel case like this:
+
+```swift
+class User: JsonObject {
+    var memberId: NSNumber!
+    var isPublic: Bool = false
+    var accountBalance: Float = 0.0
+}
+```
+
+If you'd like JsonObject to automatically map underscore properties to camel case, just implement this protocol:
+
+```swift
+extend User: MapsUnderscoreCaseToCamelCase {}
+```
+
+That was easy.
+
 ## Installation
 
 JsonObject is available through [CocoaPods](http://cocoapods.org). To install
