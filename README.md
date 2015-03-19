@@ -38,6 +38,14 @@ let jsonDictionary = user.dictionary
 
 That was easy.
 
+## Installation
+
+JsonObject is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+    pod 'JsonObject'
+
+
 ## Model Specification
 
 There are three different ways to specify your properties: default, optional or required.
@@ -67,6 +75,40 @@ Dictionary // default, optional or required
 ```
 
 All NSObject subclasses (such as NSNumber, NSString, NSArray, etc.) can be represented as default, optional or required properties.
+
+## Key Mapping
+
+Often JSON Data is represented in underscore case like so:
+
+```javascript
+{
+    "member_id":"30495", 
+    "is_public":true, 
+    "account_balance":523.22
+}
+```
+
+But we'd like our model to use camel case like this:
+
+```swift
+class User: JsonObject {
+    var memberId: NSNumber!
+    var isPublic: Bool = false
+    var accountBalance: Float = 0.0
+}
+```
+
+To have JsonObject automatically map underscore properties to camel case, we just implement this protocol:
+
+```swift
+class User: JsonObject, MapsUnderscoreCaseToCamelCase {
+    var memberId: NSNumber!
+    var isPublic: Bool = false
+    var accountBalance: Float = 0.0
+}
+```
+
+That was easy.
 
 ## JsonMapper
 
@@ -146,47 +188,6 @@ And then register an instance of the mapper with JsonObject:
 var dateInstance = NSDate()
 JsonObject.registerMapper(dateInstance)
 ```
-
-## Key Mapping
-
-Often JSON Data is represented in underscore case like so:
-
-```javascript
-{
-    "member_id":"30495", 
-    "is_public":true, 
-    "account_balance":523.22
-}
-```
-
-But we'd like our model to use camel case like this:
-
-```swift
-class User: JsonObject {
-    var memberId: NSNumber!
-    var isPublic: Bool = false
-    var accountBalance: Float = 0.0
-}
-```
-
-To have JsonObject automatically map underscore properties to camel case, we just implement this protocol:
-
-```swift
-class User: JsonObject, MapsUnderscoreCaseToCamelCase {
-    var memberId: NSNumber!
-    var isPublic: Bool = false
-    var accountBalance: Float = 0.0
-}
-```
-
-That was easy.
-
-## Installation
-
-JsonObject is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-    pod "JsonObject"
 
 ## Author
 
