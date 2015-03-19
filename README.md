@@ -1,11 +1,11 @@
 # JsonObject
 Magical Swift JSON Modeling Framework
 
-Working with json in Swift can be a pain. But it doesn't have to be.
+Working with JSON in Swift can be a pain. But it doesn't have to be.
 
 ## Usage
 
-Let's say you have some json like this:
+Let's say you have some JSON like this:
 
 ```javascript
 {"id":"1025", "name":"Tom", "state":"CA"}
@@ -20,6 +20,23 @@ class User: JsonObject {
     var state: String?
 }
 ```
+
+Now initializing our model with a JSON dictionary representation is a piece of cake:
+
+```swift
+let jsonDictionary: NSDictionary = ...deserialize your JSON data into a NSDictionary
+if let user = User(dictionary: jsonDictionary) {
+    ...do something with your new user
+}
+```
+
+Converting your user back into a JSON dictionary is also super easy:
+
+```swift
+let jsonDictionary: NSDictionary = user.dictionary
+```
+
+That was easy.
 
 ## Installation
 
