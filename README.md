@@ -75,28 +75,20 @@ To support mapping of JSON values to your object properties and back, there is a
 
 ```swift
 protocol JsonMapper {
-
     func propertyValueFromJsonValue(value: JsonValue) -> AnyObject?
-    
     func jsonValueFromPropertyValue(value: AnyObject) -> JsonValue?
-    
 }
 ```
 
 JSON values are represented by the enum, JsonValue:
 
 ```swift
-// An enum that represents a JSON dictionary value
-// Call .value() to get value
-
 enum JsonValue {
-    
     case String(NSString)
     case Number(NSNumber)
     case Array(NSArray)
     case Dictionary(NSDictionary)
     case Null(NSNull)
-    
 }
 ```
 
