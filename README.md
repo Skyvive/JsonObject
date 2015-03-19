@@ -1,7 +1,7 @@
 # JsonObject
 Magical Swift JSON Modeling Framework
 
-Working with JSON in Swift can be a pain. But it doesn't have to be.
+Working with JSON in Swift can be a pain. But it doesn't have to be. JsonObject makes initializing your Swift class from a JSON dictionary a breeze and let's you easily serialize it back!
 
 ## Basic Usage
 
