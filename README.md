@@ -69,6 +69,66 @@ Set // default, optional or required
 
 All NSObject subclasses (such as NSNumber, NSString, NSArray, etc.) can be represented as default, optional or required properties.
 
+## JsonMapper
+
+To support mapping of JSON values to your object properties and back, there is a protocol, JsonMapper:
+
+```swift
+public protocol JsonMapper {
+    
+    // Required method that returns an instance of this object given a JsonValue input
+    func propertyValueFromJsonValue(value: JsonValue) -> AnyObject?
+    
+    // Required method that returns a JsonValue given an instance of this object
+    func jsonValueFromPropertyValue(value: AnyObject) -> JsonValue?
+    
+}
+```
+
+JSON values are represented by the enum, JsonValue:
+
+```swift
+// An enum that represents a JSON dictionary value
+// Call .value() to get value
+
+public enum JsonValue {
+    
+    case String(NSString)
+    case Number(NSNumber)
+    case Array(NSArray)
+    case Dictionary(NSDictionary)
+    case Null(NSNull)
+    
+    init?(value: AnyObject?) {
+        switch value {
+        case let value as NSString:
+            self = .String(value)
+        case let value as NSNumber:
+            self = .Number(value)
+        case let value as NSArray:
+            self = .Array(value)
+        case let value as NSDictionary:
+            self = .Dictionary(value)
+        case let value as NSNull:
+            self = .Null(value)
+        default:
+            return nil
+        }
+    }
+    
+    func value() -> AnyObject {
+        switch self {
+        case .String(let value): return value
+        case .Number(let value): return value
+        case .Array(let value): return value
+        case .Dictionary(let value): return value
+        case .Null(let value): return value
+        }
+    }
+    
+}
+```
+
 ## Installation
 
 JsonObject is available through [CocoaPods](http://cocoapods.org). To install
