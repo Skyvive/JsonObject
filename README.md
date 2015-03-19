@@ -40,12 +40,18 @@ That was easy.
 
 ## Model Specification
 
-There are three different ways to specify your properties:
+There are three different ways to specify your properties: default, optional or required.
 
-1) Default Value: If you set your variable with a default value and your JSON data doesn't have that property, then your default value will remain as you specify. It is declared like so:
+1) Default: If you set your property with a default value and your JSON data doesn't have that property, then your default value will remain as you specify.
+
+2) Optional: If you declare an optional property then it may or may not have a value after you initialize your model.
+
+3) Required: If you declare an implicitly unwrapped property, then JsonObject will make sure that your property has a value when initializing, or the initialization will fail. This keeps your models safe and makes it easy to specify which fields are required.
 
 ```swift
-var default: String = "Some default value"
+var defaultString: String = "Hello World" // This string will always have a value with the default being 'Hello World'
+var optionalString: String? // This may or may not have a value after initalization
+var requiredString: String! // If this property can't be set then initialization will fail
 ```
 
 ## Installation
