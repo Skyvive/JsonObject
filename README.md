@@ -64,7 +64,6 @@ Bool // default only
 String // default, optional or required
 Array // default, optional or required
 Dictionary // default, optional or required
-Set // default, optional or required
 ```
 
 All NSObject subclasses (such as NSNumber, NSString, NSArray, etc.) can be represented as default, optional or required properties.
@@ -102,12 +101,10 @@ Bool
 String
 Array
 Dictionary
-Set
 NSNumber
 NSString
 NSArray
 NSDictionary
-NSSet
 JsonObject
 ```
 
