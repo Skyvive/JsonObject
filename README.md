@@ -166,28 +166,28 @@ class User: JsonObject {
 }
 ```
 
-If you'd like to implement your own mapper, simply extend the class you'd like a mapper for:
+<!--If you'd like to implement your own mapper, simply extend the class you'd like a mapper for:-->
 
-```swift
-extesion NSDate: JsonMapper {
+<!--```swift-->
+<!--extesion NSDate: JsonMapper {-->
     
-    func propertyValueFromJsonValue(value: JsonValue) -> AnyObject? {
-        // Convert a JsonValue into an NSDate...
-    }
+<!--    func propertyValueFromJsonValue(value: JsonValue) -> AnyObject? {-->
+<!--        // Convert a JsonValue into an NSDate...-->
+<!--    }-->
     
-    func jsonValueFromPropertyValue(value: AnyObject) -> JsonValue? {
-        // Convert an NSDate into a JsonValue...
-    }
+<!--    func jsonValueFromPropertyValue(value: AnyObject) -> JsonValue? {-->
+<!--        // Convert an NSDate into a JsonValue...-->
+<!--    }-->
     
-}
-```
+<!--}-->
+<!--```-->
 
-And then register an instance of the mapper with JsonObject:
+<!--And then register an instance of the mapper with JsonObject:-->
 
-```swift
-var dateInstance = NSDate()
-JsonObject.registerMapper(dateInstance)
-```
+<!--```swift-->
+<!--var dateInstance = NSDate()-->
+<!--JsonObject.registerMapper(dateInstance)-->
+<!--```-->
 
 ## Author
 
