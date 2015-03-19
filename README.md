@@ -54,6 +54,8 @@ var optionalString: String? // This may or may not have a value after initalizat
 var requiredString: String! // If this property can't be set, then initialization will fail
 ```
 
+WARNING: Because most native Swift objects can't be bridged to ObjC objects, key-value coding fails for optional versions of these types. Int, Float, Bool, and other native Swift objects must be declared as default properties or they can't be set.
+
 ## Installation
 
 JsonObject is available through [CocoaPods](http://cocoapods.org). To install
