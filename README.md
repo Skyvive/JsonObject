@@ -38,12 +38,12 @@ let jsonDictionary = user.dictionary
 
 That was easy.
 
-## Installation
+<!--## Installation-->
 
-JsonObject is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+<!--JsonObject is available through [CocoaPods](http://cocoapods.org). To install-->
+<!--it, simply add the following line to your Podfile:-->
 
-    pod 'JsonObject'
+<!--    pod 'JsonObject'-->
 
 
 ## Model Specification
