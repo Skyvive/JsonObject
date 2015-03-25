@@ -9,7 +9,7 @@
 import UIKit
 import JsonObject
 
-extension UIColor:JsonMapper {
+extension UIColor: JsonMapper {
     
     public func propertyValueFromJsonValue(value: JsonValue) -> AnyObject? {
         switch(value) {
