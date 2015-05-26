@@ -3,6 +3,14 @@ Magical Swift JSON Modeling Framework
 
 Working with JSON in Swift can be a pain. But it doesn't have to be. JsonObject makes initializing your Swift class from a JSON dictionary a breeze and let's you easily serialize it back!
 
+## Installation
+
+JsonObject is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+```ruby
+pod 'JsonObject'
+```
+Alternatively, you can clone this repo or download it as a zip and include the classes in your project.
+
 ## Basic Usage
 
 Let's say you have some JSON like this:
