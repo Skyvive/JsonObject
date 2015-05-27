@@ -10,7 +10,7 @@ JsonObject is available through [CocoaPods](http://cocoapods.org). To install, s
 use_frameworks!
 pod 'JsonObject'
 ```
-To use, just import JsonObject at the top of your .swift file:
+To use JsonObject, import it at the top of your .swift file:
 ```swift
 import JsonObject
 ```
