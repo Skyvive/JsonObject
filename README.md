@@ -5,11 +5,16 @@ Working with JSON in Swift can be a pain. But it doesn't have to be. JsonObject 
 
 ## Installation
 
-JsonObject is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+JsonObject is available through [CocoaPods](http://cocoapods.org). To install, simply include the following lines in your podfile:
 ```ruby
+use_frameworks!
 pod 'JsonObject'
 ```
-Alternatively, you can clone this repo or download it as a zip and include the classes in your project.
+To use, just import JsonObject at the top of your .swift file:
+```swift
+import JsonObject
+```
+Alternatively, clone this repo or download it as a zip and include the classes in your project.
 
 ## Basic Usage
 
