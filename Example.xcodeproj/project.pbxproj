@@ -151,6 +151,7 @@
 		A267CD7A1AB77FB500E014C8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Skyvive;
 				TargetAttributes = {
