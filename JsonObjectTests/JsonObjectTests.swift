@@ -60,7 +60,7 @@ class SampleData: NSObject {
                     "account_balance":NSNumber(double: 23.24),
                     "ranking":NSNumber(float: 14.21)],
                 "metadata":["arm_length":[NSNumber(double: 5.67), NSNumber(double: 16.42)]],
-                "friends":[
+                "friends": [
                     ["id":NSNumber(integer: 34567),
                         "name":"Hob",
                         "is_public":NSNumber(bool: false),
@@ -72,7 +72,9 @@ class SampleData: NSObject {
                         "is_public":NSNumber(bool: true),
                         "is_member":NSNumber(bool: true),
                         "account_balance":NSNumber(double: 18.11),
-                        "ranking":NSNumber(float: 12.11)]]]
+                        "ranking":NSNumber(float: 12.11)]
+                ]
+            ]
         }
     }
 }
